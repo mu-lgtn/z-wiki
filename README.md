@@ -1,2 +1,2 @@
-# zuu-wiki
-ゾ ミ カ ス ダ ン ジ ョ ン 攻略ウィキ
+# zomikasu-wiki
+ぞみー
