@@ -146,23 +146,35 @@ p {
     margin-bottom: 15px;
 }
 /*ボタンのスタイル*/
+#section-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 .btn {
     display: block;
     width: 700px;
-    padding: 32px 0;
-    background-color: #3b82f6;
-    color: #ffffff;
+    padding: 20px 0;
+    padding-left: 30px;
+    background-color: transparent;
+    color: #3b82f6;
     text-decoration: none;
     font-weight: bold;
+    border: 4px solid #3b82f6;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
     transition: all 0.2s ease;
     cursor: pointer;
     text-align: left;
-    padding-left: 30px;
+}
+@media (max-width: 768px) {
+    .btn {
+        width: 300px;
+    }
 }
 .btn:hover {
-    background-color: #2563eb; /* 背景色を少し濃い青にする */
+    color: #ffffff;
+    background-color: #66a0f6;
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(59, 130, 246, 0.3);
 }
@@ -180,12 +192,12 @@ p {
     white-space: nowrap;
 }
 .main-text {
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 700;
 }
 .sub-text {
-    font-size: 11px;
-    font-weight: normal;
+    font-size: 18px;
+    font-weight: bold;
     opacity: 0.8;
     margin-top: 2px;
 }
@@ -193,9 +205,8 @@ p {
 .news-box {
     max-height: 200px;
     overflow-y: auto;
-    border: 1px solid #000;
+    border: 1px solid #3b82f6;
     padding: 15px;
-    background-color: #f9f9f9;
     border-radius: 3px;
 }
 .news-list {
@@ -207,7 +218,7 @@ p {
 }
 .news-list dt {
     font-weight: bold;
-    color: #555;
+    color: #3072e6;
     white-spaec: nowrap;
 }
 .news-list dd {
