@@ -1,0 +1,216 @@
+/* 全体のリセット及び基本設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* ヘッダー全体のスタイル */
+.site-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+/* サイトロゴのスタイル */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3b82f6;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+.logo:hover {
+  opacity: 0.7;
+}
+
+/* 三本線ボタンのスタイル */
+.hamburger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 110;
+}
+/* 三本線の共通設定 */
+.hamburger span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+/* 各線の位置調整 */
+.hamburger span:nth-child(1) { top: 1px; }
+.hamburger span:nth-child(2) { top: 11px; }
+.hamburger span:nth-child(3) { top: 22px; }
+
+/* ボタンを押した時の「×」アニメーション */
+.hamburger.is-active span:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+.hamburger.is-active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.is-active span:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+/* ナビゲーションメニュー */
+.nav-menu {
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    width: 200px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* 浮き出て見える影 */
+    border: 1px solid #eee;
+    padding: 10px 0;
+    z-index: 100;
+    
+    /* 初期状態は非表示（ふわっと出すための設定） */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px); /* 少し上から落ちてくる効果 */
+    transition: all 0.3s ease;
+}
+
+/* メニューを開いた時 (activeクラスがついた時) */
+.nav-menu.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-menu ul {
+    list-style: none;
+}
+.nav-menu li {
+    width: 100%;
+}
+.nav-menu a {
+    display: block;
+    text-decoration: none;
+    color: #444;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 20px;
+    transition: background-color 0.2s, color 0.2s;
+}
+.nav-menu a:hover {
+    background-color: #f0f6ff;
+    color: #3b82f6;
+}
+
+/* メインコンテンツのスタイル */
+.main-content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+h1 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 10px;
+}
+p {
+    margin-bottom: 15px;
+}
+/*ボタンのスタイル*/
+.btn {
+    display: block;
+    width: 700px;
+    padding: 32px 0;
+    background-color: #3b82f6;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 30px;
+}
+.btn:hover {
+    background-color: #2563eb; /* 背景色を少し濃い青にする */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(59, 130, 246, 0.3);
+}
+
+/*ボタンがクリックされた時の動き*/
+.btn:active {
+    transform: translateY(0);  /* 押したときに元の高さに戻る */
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2); /* 影を薄くする */
+}
+/*ボタン内のテキストの詳細設定*/
+.btn-text {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    white-space: nowrap;
+}
+.main-text {
+    font-size: 15px;
+    font-weight: 700;
+}
+.sub-text {
+    font-size: 11px;
+    font-weight: normal;
+    opacity: 0.8;
+    margin-top: 2px;
+}
+/*トップページのお知らせのスタイル*/
+.news-box {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #000;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+}
+.news-list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 15px;
+}
+.news-list dt {
+    font-weight: bold;
+    color: #555;
+    white-spaec: nowrap;
+}
+.news-list dd {
+    margin: 0;
+    color: #333;
+}
