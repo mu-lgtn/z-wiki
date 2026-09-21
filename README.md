@@ -3,3 +3,4 @@
 君が見ているのはwikiの中身ぞみ<br>
 ページ本体も見ていくぞみ<br>
 これがリンクぞみ<br>
+<a>https://mu-lgtn.github.io/zomikasu-wiki/</a>
