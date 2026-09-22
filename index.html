@@ -13,10 +13,10 @@
     <header class="site-header">
         <div class="header-container">
             <!-- タイトルロゴをトップページへリンクする-->
-            <a href="index.html" class="logo">ゾミカスダンジョン攻略wiki</a>
+            <a href="index.html" class="logo">ゾミウィキ</a>
             
             <!-- ハンバーガーボタン -->
-            <button class="hamburger" id="js-hamburger" aria-label="メニューを開閉する">
+            <button class="hamburger" id="js-hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -38,27 +38,39 @@
 
     <!-- メインコンテンツ -->
     <main class="main-content">
-        <section id="section-news" style="margin-bottom: 100px;">
-            <h1>お知らせ</h1>
+        <section id="section-title" style="margin-bottom: 50px;">
+            <h1>ゾミカスダンジョン攻略wiki v.1.0</h1>
+            <p>ゾミカスダンジョンの非公式ウィキへようこそ！<br>
+               このサイトでは様々な検証の結果や、攻略に役立つ色々な情報をお届けします。</p>
+        </section>
+        <section id="section-news" style="margin-bottom: 50px;">
+            <h2>お知らせ</h2>
             <div class="news-box">
                 <dl class="news-list">
+                    <dt>26/09/22 18:00</dt>
+                    <dd>・ページをv.4.0に更新しました。現在のバージョンについてはこのページの最下部から確認できます。</dd>
+                    <dd>・ブキ一覧がver.4.0に対応しました。ver.5.0については調査中です。</dd>
+
+                    <dt>26/09/21 18:00</dt>
+                    <dd>・ページをベータ版に更新しました。</dd>
+                    
                     <dt>26/09/21 15:30</dt>
-                    <dd>アルファ版を公開しました。</dd>
+                    <dd>・アルファ版を公開しました。</dd>
 
                     <dt>26/09/21 12:00</dt>
-                    <dd>ゾミカスダンジョンver.5.0 が公開されました。</dd>
+                    <dd><strong>・ゾミカスダンジョンver.5.0 が公開されました。</strong></dd>
 
                     <dt>26/09/20 21:00</dt>
-                    <dd>サイトの立ち上げ準備を開始しました。</dd>
+                    <dd>・サイトの立ち上げ準備を開始しました。</dd>
                 </dl>
             </div>
         </section>
 
         <section id="section-hero" style="margin-bottom: 50px;">
-            <h1>ページ一覧</h1>
+            <h2>ページ一覧</h2>
             <a href="strategy.html" class="btn btn-text">
                 <span class="main-text">ダンジョン攻略</span>
-                <span class="sub-text">管理人おすすめのダンジョン攻略チャート</span>
+                <span class="sub-text">より上層階を目指すためのコツ</span>
             </a>
 
             <a href="weapon.html" class="btn btn-text">
@@ -76,6 +88,9 @@
                 <span class="sub-text">各ボスの攻撃方法やブキごとの対処法</span>
             </a>
         </section>
+        <div id="page-version">
+            <p>ゾミウィキ v.4.0   2026. released by mu_lgtn</p>
+        </div>
     </main>
 
     <!-- jsファイル読み込み -->

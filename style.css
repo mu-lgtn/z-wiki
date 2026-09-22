@@ -137,13 +137,14 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
-h1 {
+h2 {
+    font-size: 28px;
     margin-bottom: 20px;
     border-bottom: 2px solid #3b82f6;
     padding-bottom: 10px;
 }
 p {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 /*ボタンのスタイル*/
 #section-hero {
@@ -169,7 +170,10 @@ p {
 }
 @media (max-width: 768px) {
     .btn {
-        width: 300px;
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        padding-left: 20px;
     }
 }
 .btn:hover {
@@ -203,7 +207,7 @@ p {
 }
 /*トップページのお知らせのスタイル*/
 .news-box {
-    max-height: 200px;
+    max-height: 250px;
     overflow-y: auto;
     border: 1px solid #3b82f6;
     padding: 15px;
@@ -213,15 +217,156 @@ p {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: max-content 1fr;
     gap: 10px 15px;
 }
 .news-list dt {
     font-weight: bold;
     color: #3072e6;
-    white-spaec: nowrap;
+    white-space: nowrap;
+    grid-column: 1;
 }
 .news-list dd {
     margin: 0;
     color: #333;
+    grid-column: 2;
+}
+/*ブキページ目次(リンク一覧)のスタイル*/
+.weapon-toc {
+    background-color: #f0f6ff;
+    border: 1px solid #dbeafe;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.weapon-anchor ul {
+    list-style-type: none;
+    padding-left: 5px;
+}
+.weapon-anchor li {
+    margin-bottom: 8px;
+}
+.weapon-anchor li::before {
+    content: "▶";
+    color: #3b82f6;
+    font-size: 12px;
+    margin-right: 8px;
+}
+.weapon-anchor a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+.weapon-anchor a:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+/*ブキテーブルのスタイル*/
+.table-wrapper {
+    overflow-x: auto; /* スマホ時の横スクロール対策 */
+    margin-bottom: 40px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+}
+.weapon-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    text-align: center;
+    min-width: 500px;
+    table-layout: fixed;
+}
+.weapon-table th:nth-child(1),
+.weapon-table td:nth-child(1) {
+    width: 31%; /* 名称 */
+}
+.weapon-table th:nth-child(2),
+.weapon-table td:nth-child(2) {
+    width: 23%; /* 攻撃力 */
+}
+.weapon-table th:nth-child(3),
+.weapon-table td:nth-child(3) {
+    width: 23%; /* 連射力 */
+}
+.weapon-table th:nth-child(4),
+.weapon-table td:nth-child(4) {
+    width: 23%; /* 射程・範囲 */
+}
+.weapon-table th,
+.weapon-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e5e7eb;
+}
+.weapon-table th {
+    background-color: #f3f4f6;
+    color: #4b5563;
+    font-weight: 600;
+}
+.weapon-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+.weapon-table a {
+    color: #2563eb;
+    font-weight: bold;
+}
+.weapon-table a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .weapon-table {
+        min-width: auto;
+        font-size: 14px;
+    }
+    .weapon-table th,
+    .weapon-table td {
+        padding: 8px 8px;
+    }
+    .weapon-table th:nth-child(1),
+    .weapon-table td:nth-child(1) {
+        width: 40%; /* 名称 */
+    }
+    .weapon-table th:nth-child(2),
+    .weapon-table td:nth-child(2) {
+        width: 20%; /* 攻撃力 */
+    }
+    .weapon-table th:nth-child(3),
+    .weapon-table td:nth-child(3) {
+        width: 20%; /* 連射力 */
+    }
+    .weapon-table th:nth-child(4),
+    .weapon-table td:nth-child(4) {
+        width: 20%; /* 射程・範囲 */
+    }
+}
+/*ブキカードのスタイル*/
+.weapon-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+.weapon-card h3 {
+    font-size: 20px;
+    color: #1f2937;
+    border-left: 4px solid #3b82f6;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+.weapon-info p {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+.back-to-top {
+    text-align: right;
+    margin-top: 15px;
+    font-size: 13px;
+}
+.back-to-top a {
+    color: #9ca3af;
+    text-decoration: none;
+}
+.back-to-top a:hover {
+    color: #3b82f6;
 }
