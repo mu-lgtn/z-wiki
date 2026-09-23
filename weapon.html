@@ -41,18 +41,18 @@
         <section class="weapon-top" style="margin-bottom: 50px;">
             <h1>ブキ一覧</h1>
             <p>ダンジョンの中に落ちているブキは種類が多く、多岐にわたる。<br>
-               その中から、自分にとって使いやすいものを見つけることは、攻略への第一歩だ</p>
+               その中から、自分にとって使いやすいものを見つけることは、攻略への第一歩だ。</p>
         </section>
 
         <!-- リンク一覧 -->
-        <section class="weapon-anchor" style="margin-bottom: 50px;">
+        <section class="section-anchor" style="margin-bottom: 50px;">
             <h2>目次 (クリックでスクロール)</h2>
             <ul>
                 <li><a href="#sword">剣</a></li>
                 <li><a href="#club">棍棒</a></li>
+                <li><a href="#cross">十字架</a></li>
                 <li><a href="#shotgun">ショットガン</a></li>
                 <li><a href="#rocketlancher">ロケットランチャー</a></li>
-                <li><a href="#cross">十字架</a></li>
             </ul>
         </section>
 
@@ -83,6 +83,12 @@
                         <td>中･狭</td>
                     </tr>
                     <tr>
+                        <td><a href="#cross">十字架</a></td>
+                        <td>無(*)</td>
+                        <td>低</td>
+                        <td>長･中~広</td>
+                    </tr>
+                    <tr>
                         <td><a href="#shotgun">ショットガン</a></td>
                         <td>低~高</td>
                         <td>中~高</td>
@@ -94,25 +100,19 @@
                         <td>低~中</td>
                         <td>長･広</td>
                     </tr>
-                    <tr>
-                        <td><a href="#cross">十字架</a></td>
-                        <td>無(*)</td>
-                        <td>低</td>
-                        <td>長･中~広</td>
-                    </tr>
                 </tbody>
             </table>
             </div>
         </section>
 
         <!-- 詳細説明 -->
-        <section class="weapon-details">
+        <section class="section-details">
             <h2>各ブキ詳細</h2>
             
             <!-- ブキごとにブロックで分割 -->
-            <article id="sword" class="weapon-card">
+            <article id="sword" class="section-card">
                 <h3>剣</h3>
-                <div class="weapon-info">
+                <div class="section-info">
                     <p>プレイヤーが初めから装備しているブキ。</p>
                     <p>攻撃力はそこそこだが、非常に高い連射力でカバーできる。<br>
                        また、強化をしても射程はそれほど伸びない分、横に広くなる。</p>
@@ -121,9 +121,9 @@
                 </div>
                 <div class="back-to-top"><a href="#">▲目次へ戻る</a></div>
             </article>
-            <article id="club" class="weapon-card">
+            <article id="club" class="section-card">
                 <h3>棍棒</h3>
-                <div class="weapon-info">
+                <div class="section-info">
                     <p>剣よりもさらに物理で殴ることに特化したブキ。<br>
                        攻撃範囲を犠牲に、それなりの射程と比較的高めの攻撃力を得た。</p>
                     <p>剣よりもエイムが難しいが、連射力は高いのでそこまで焦る必要はない。<br>
@@ -132,32 +132,9 @@
                 </div>
                 <div class="back-to-top"><a href="#">▲目次へ戻る</a></div>
             </article>
-            <article id="shotgun" class="weapon-card">
-                <h3>ショットガン</h3>
-                <div class="weapon-info">
-                    <p>銃火器なので遠距離型に見えるが近接ブキ。<br>
-                       複数個の弾を広角に飛ばすことができる。</p>
-                    <p>銃ゆえにリロードがいるので、適切な間合いの管理が必要だ。</p>
-                    <p>一発あたりの威力は低いが、弾数にものを言わせてザコ敵を一撃で仕留めることもできる。<br>
-                        ただ、やはり散弾率が高めなので図体が大きく遅い敵を積極的に狙いたい。</p>
-                </div>
-                <div class="back-to-top"><a href="#">▲目次へ戻る</a></div>
-            </article>
-            <article id="rocketlancher" class="weapon-card">
-                <h3>ロケットランチャー</h3>
-                <div class="weapon-info">
-                    <p>みんな大好きロケラン。<br>
-                       このゲームでは、プレイヤーが扱える唯一の爆発物。</p>
-                    <p>広い範囲攻撃を持ち、爆風には弱いノックバック判定がある。<br>
-                       直撃はかなりの高威力、爆風は壁を貫通するが中心から離れるごとに威力が減衰する。</p>
-                    <p>そもそも敵か壁に当たるまで爆発せず、弾数も少ないのでエイムは必須だ。<br>
-                       割と上級者向けのブキかもしれない。</p>
-                </div>
-                <div class="back-to-top"><a href="#">▲目次へ戻る</a></div>
-            </article>
-            <article id="cross" class="weapon-card">
+            <article id="cross" class="section-card">
                 <h3>十字架</h3>
-                <div class="weapon-info">
+                <div class="section-info">
                     <p>攻撃力を持たず、幽霊を倒すことができる唯一のブキ。<br>
                        ブキというよりかは、もはや装備品の方が近いかもしれない。</p>
                     <p>敵か壁に当たると魔法陣を展開する弾を撃つことができる。<br>
@@ -165,6 +142,29 @@
                     <p>展開した魔法陣が消える頃にはリロード出来ているので、燃費は決して悪くない。<br>
                        しかし、攻撃力が基本0である以上は、これを主軸に探索するのは厳しいと思われる。<br>
                        ただ、魔法陣内の敵はタコ殴りに出来るので、パーティーにいると多少は役立つかもしれない。</p>
+                </div>
+                <div class="back-to-top"><a href="#">▲目次へ戻る</a></div>
+            </article>
+            <article id="shotgun" class="section-card">
+                <h3>ショットガン</h3>
+                <div class="section-info">
+                    <p>銃火器なので遠距離型に見えるが近接ブキ。<br>
+                       複数個の弾を広角に飛ばすことができる。</p>
+                    <p>銃ゆえにリロードがいるので、適切な間合いの管理が必要だ。</p>
+                    <p>一発あたりの威力は低いが、五発を全て当てればザコ敵を一撃で仕留めることもできる。<br>
+                        ただ、やはり散弾率が高めなので図体が大きく遅い敵を積極的に狙いたい。</p>
+                </div>
+                <div class="back-to-top"><a href="#">▲目次へ戻る</a></div>
+            </article>
+            <article id="rocketlancher" class="section-card">
+                <h3>ロケットランチャー</h3>
+                <div class="section-info">
+                    <p>みんな大好きロケラン。<br>
+                       このゲームでは、プレイヤーが扱える唯一の爆発物。</p>
+                    <p>広い範囲攻撃を持ち、爆風には弱いノックバック判定がある。<br>
+                       直撃はかなりの高威力、爆風は壁を貫通するが中心から離れるごとに威力が減衰する。</p>
+                    <p>そもそも敵か壁に当たるまで爆発せず、弾数も少ないのでエイムは必須だ。<br>
+                       割と上級者向けのブキかもしれない。</p>
                 </div>
                 <div class="back-to-top"><a href="#">▲目次へ戻る</a></div>
             </article>
